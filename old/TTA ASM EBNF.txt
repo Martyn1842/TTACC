@@ -1,0 +1,32 @@
+main function		=	"main", declaration*, statement*, "end"
+
+block				=	declaration*, statement*
+
+statement			=	declaration | assignment
+
+var declaration		=	"var", identifier, "=", expression
+
+assignment			=	identifier, (",", identifier)*,
+						"=", expression
+
+identifier			=	("_" | LETTER), ("_" | LETTER | DIGIT)*		=[_%a][_%w]*
+
+expression			=	term, (addop, term)*
+
+term				=	factor, (mulop, factor)*
+
+factor				=	INTEGER | ( "(", expression, ")" ) | var
+						| function call
+						
+function call		=	identifier, "(", (argument)?,
+								(",", argument)*, ")"
+								
+argument			= 	expression
+
+mulop				=	"*" | "/"									=[*/]
+
+addop				=	"+" | "-"									=[+-]
+
+INTEGER				=	("+" | "-")?, DIGIT+						=[+-]?[%d]+
+
+

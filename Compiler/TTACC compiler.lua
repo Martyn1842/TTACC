@@ -17,14 +17,19 @@
     --Sixth pass over AST, assign data lanes
 ]]
 
+
+--Get running file path information
+--local filepath = string.sub(debug.getinfo(1, "S").source, 2, -1)
+local filepath = arg[0]
+print(filepath)
+local _, _, directorySeparator = string.find(filepath, "([\\/])")
+local _, _, dirpath = string.find(filepath, "(.+"..directorySeparator..")")
+
+print(dirpath)
+print(package.path)
 --Load required libraries
 local graph = require("graph.lua")
 local multiset = require("multiset.lua")
-
---Get running file path information
-local filepath = string.sub(debug.getinfo(1, "S").source, 2, -1)
-local _, _, directorySeparator = string.find(filepath, "([\\/])")
-local _, _, dirpath = string.find(filepath, "(.+"..directorySeparator..")")
 
 ------------------------------------
 -- Compiler error reporting functions
@@ -62,7 +67,7 @@ end
 local newScanner = function(s)
 	local newScan = {cursorPos = 0, currLine = 1, s = s}
 	--Returns next token in s, skipping WS and NL
-	newScan:getNextToken = function(pat)
+	function newScan:getNextToken(pat)
 		local c --Capture
 		--Skip WS
 		_, self.cursorPos, c = string.find(self.s, "[ 	]*([^ 	])",
@@ -83,13 +88,13 @@ local newScanner = function(s)
 		end
 	end
 	--Abort unless expected token s is next
-	newScan:expect = function(s)
+	function newScan:expect(s)
 		if not self:getNextToken(--Escape any magic characters
 			"^("..string.gsub(s, "([%(%)%.%%%+%-%*%?%[%^%$])", "%%%1")..")") then
 			abort("expected \""..s.."\"")
 		end
 	end
-	newScan:processStatement = function(token)
+	function newScan:processStatement(token)
 		if symTab[token] == nil then
 			abort("token \""..token.."\" not recognised")
 		elseif symTypes[token] == "register" then
@@ -98,7 +103,7 @@ local newScanner = function(s)
 			symTab[token]()
 		end
 	end
-	newScan:getStatement = function()
+	function newScan:getStatement()
 		-- print("getting statement") io.read()
 		local token = self:getNextToken("^([_%a][_%w]*)")
 		if token == nil then return end --halt(" === SCRIPT COMPLETE === ") end

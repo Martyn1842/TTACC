@@ -26,8 +26,9 @@ local _, _, directorySeparator = string.find(filepath, "([\\/])")
 local _, _, dirpath = string.find(filepath, "(.+"..directorySeparator..")")
 
 print(dirpath)
-print(package.path)
 --Load required libraries
+--package.path = dirpath.."?;"..package.path
+print(package.path)
 local graph = require("graph.lua")
 local multiset = require("multiset.lua")
 

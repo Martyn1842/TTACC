@@ -97,12 +97,11 @@ function graph:addEdge(vertex, vertex2) --Add directional edge from vertex to ve
 end
 
 function graph:removeEdge(vertex, vertex2) --Remove one edge from vertex to vertex2
-    if self[vertex] and self[vertex2] then
-        for i = 1, #self[vertex] do
-            if self[vertex][i] == vertex2 then
-                table.remove(self[vertex], i)
-                return true
-            end
+    if not (self[vertex] and self[vertex2]) then return end
+    for i = 1, #self[vertex] do
+        if self[vertex][i] == vertex2 then
+            table.remove(self[vertex], i)
+            return true
         end
     end
 end
@@ -115,10 +114,9 @@ function graph:removeAllEdges(vertex)
 end
 
 function graph:isAdjacent(vertex, vertex2) --Returns true if vertex2 is adjacent to vertex
-    if self[vertex] and self[vertex2] then
-        for i = 1, #self[vertex] do
-            if self[vertex][i] == vertex2 then return true end
-        end
+    if not (self[vertex] and self[vertex2]) then return end
+    for i = 1, #self[vertex] do
+        if self[vertex][i] == vertex2 then return true end
     end
     return false
 end

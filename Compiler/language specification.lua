@@ -7,15 +7,14 @@ lang.__index = contents
 lang.__newindex = function(k, v)
     if contents[k] then
         abort("Symbol \""..k.."\" has already been defined")
+    end
+    contents[k] = v
+    if string.find(k, "^R[%d]+") then
+        lang._type[k] = "register"
+    elseif string.find(k, "^RAM[%d]+") then
+        lang._type[k] = "RAM"
     else
-        contents[k] = v
-        if string.find(k, "^R[%d]+") then
-            lang._type[k] = "register"
-        elseif string.find(k, "^RAM[%d]+") then
-            lang._type[k] = "RAM"
-        else
-            lang._type[k] = "reserved"
-        end
+        lang._type[k] = "reserved"
     end
 end
 setmetatable(lang, lang)

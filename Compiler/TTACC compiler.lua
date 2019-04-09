@@ -71,8 +71,7 @@ local newScanner = function(s)
 	function newScan:getNextToken(pat)
 		local c --Capture
 		--Skip WS
-		_, self.cursorPos, c = string.find(self.s, "[ 	]*([^ 	])",
-			self.cursorPos)
+		_, self.cursorPos, c = string.find(self.s, "[ 	]*([^ 	])", self.cursorPos)
 		if self.cursorPos == nil then return end
 		if c == "\n" then --If c is a NL
 			self.cursorPos=self.cursorPos+1
@@ -81,10 +80,8 @@ local newScanner = function(s)
 		else
 			-- match pattern pat else match not (WS or NL)
 			local tokenStart = self.cursorPos
-			_, self.cursorPos, c = string.find(self.s, pat or
-				"([^ 	\n]+)", self.cursorPos)
-			self.cursorPos = self.cursorPos and
-				self.cursorPos+1 or tokenStart
+			_, self.cursorPos, c = string.find(self.s, pat or "([^ 	\n]+)", self.cursorPos)
+			self.cursorPos = self.cursorPos and self.cursorPos+1 or tokenStart
 			return c
 		end
 	end

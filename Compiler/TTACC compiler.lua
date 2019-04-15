@@ -27,10 +27,20 @@ local _, _, dirpath = string.find(filepath, "(.+"..directorySeparator..")")
 
 print(dirpath)
 --Load required libraries
---package.path = dirpath.."?;"..package.path
+local locRequire = function()
+	local altPath = dirpath.."?.lua;"
+	return function(name)
+		local oldPath = package.path
+		package.path = altPath
+		local result = require(name)
+		package.path = oldPath
+		return result
+	end
+end
+locRequire = locRequire()
 print(package.path)
-local graph = require("graph.lua")
-local multiset = require("multiset.lua")
+local graph = locRequire("lib.graph")
+local multiset = locRequire("lib.multiset")
 
 ------------------------------------
 -- Compiler error reporting functions
@@ -73,17 +83,27 @@ local newScanner = function(s)
 		--Skip WS
 		_, self.cursorPos, c = string.find(self.s, "[ 	]*([^ 	])", self.cursorPos)
 		if self.cursorPos == nil then return end
-		if c == "\n" then --If c is a NL
-			self.cursorPos=self.cursorPos+1
-			self.currLine=self.currLine+1
-			return self:getNextToken(pat)
-		else
+		-- if c == "\n" then --If c is a NL
+			-- self.cursorPos=self.cursorPos+1
+			-- self.currLine=self.currLine+1
+			-- return self:getNextToken(pat)
+		if c == ";" then --If c is a comment
+			_, self.cursorPos = string.find(self.s, "\n", self.cursorPos)
+			if self.cursorPos == nil then return end
+			-- self.cursorPos=self.cursorPos+1
+			-- self.currLine=self.currLine+1
+			-- return self:getNextToken(pat)
+		elseif c ~= "\n" then --If c is not a NL
 			-- match pattern pat else match not (WS or NL)
 			local tokenStart = self.cursorPos
 			_, self.cursorPos, c = string.find(self.s, pat or "([^ 	\n]+)", self.cursorPos)
 			self.cursorPos = self.cursorPos and self.cursorPos+1 or tokenStart
 			return c
 		end
+		-- c is a NL, or fallen through after skipping comment
+		self.cursorPos=self.cursorPos+1
+		self.currLine=self.currLine+1
+		return self:getNextToken(pat)
 	end
 	--Abort unless expected token s is next
 	function newScan:expect(s)
@@ -113,9 +133,10 @@ local newScanner = function(s)
 end
 
 --Load input and specification files
-local symTab = require(extraxtArg("-l") or "language specification.lua")
-local component = require(extraxtArg("-a") or "architecture specification.lua")
-local specification = require(extraxtArg("-s") or "computer specification.lua")
-local inFile = assert(io.open(extraxtArg("-f") or "input.txt"))
+local symTab = locRequire(extraxtArg("-l") or "language specification")
+component = locRequire(extraxtArg("-a") or "architecture specification")
+local specification = locRequire(extraxtArg("-s") or "computer specification")
+local inFile = assert(io.open(extraxtArg("-f") or dirpath.."input.txt"))
 local input = newScanner(inFile:read("*all"))
 inFile:close()
+print(input.s)

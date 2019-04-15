@@ -4,17 +4,17 @@
 local lang = {_type = {}}
 local contents = {}
 lang.__index = contents
-lang.__newindex = function(k, v)
+lang.__newindex = function(t, k, v)
     if contents[k] then
         abort("Symbol \""..k.."\" has already been defined")
     end
     contents[k] = v
     if string.find(k, "^R[%d]+") then
-        lang._type[k] = "register"
+        t._type[k] = "register"
     elseif string.find(k, "^RAM[%d]+") then
-        lang._type[k] = "RAM"
+        t._type[k] = "RAM"
     else
-        lang._type[k] = "reserved"
+        t._type[k] = "reserved"
     end
 end
 setmetatable(lang, lang)

@@ -2,8 +2,9 @@
 --[[
     Compiler contents:
     -Miscelanious functions
-    -Lexical scanner
-    -Expression parsing
+	-Lexical scanner
+	-Expression parser
+	-Load files
 
     Compiler architecture:
     -Tokenisation by Lexical Scanner
@@ -21,29 +22,15 @@
 --Get running file path information
 --local filepath = string.sub(debug.getinfo(1, "S").source, 2, -1)
 local filepath = arg[0]
-print(filepath)
 local _, _, directorySeparator = string.find(filepath, "([\\/])")
 local _, _, dirpath = string.find(filepath, "(.+"..directorySeparator..")")
 
-print(dirpath)
---Load required libraries
-local locRequire = function()
-	local altPath = dirpath.."?.lua;"
-	return function(name)
-		local oldPath = package.path
-		package.path = altPath
-		local result = require(name)
-		package.path = oldPath
-		return result
-	end
-end
-locRequire = locRequire()
-print(package.path)
-local graph = locRequire("lib.graph")
-local multiset = locRequire("lib.multiset")
+package.path = dirpath.."?.lua;"..package.path
+local graph = require("lib.graph")
+local multiset = require("lib.multiset")
 
 ------------------------------------
--- Compiler error reporting functions
+-- Miscelanious compiler functions
 
 local halt = function(s) --Print s and stop program
 	io.output(stdout)
@@ -83,16 +70,9 @@ local newScanner = function(s)
 		--Skip WS
 		_, self.cursorPos, c = string.find(self.s, "[ 	]*([^ 	])", self.cursorPos)
 		if self.cursorPos == nil then return end
-		-- if c == "\n" then --If c is a NL
-			-- self.cursorPos=self.cursorPos+1
-			-- self.currLine=self.currLine+1
-			-- return self:getNextToken(pat)
 		if c == ";" then --If c is a comment
 			_, self.cursorPos = string.find(self.s, "\n", self.cursorPos)
 			if self.cursorPos == nil then return end
-			-- self.cursorPos=self.cursorPos+1
-			-- self.currLine=self.currLine+1
-			-- return self:getNextToken(pat)
 		elseif c ~= "\n" then --If c is not a NL
 			-- match pattern pat else match not (WS or NL)
 			local tokenStart = self.cursorPos
@@ -115,28 +95,35 @@ local newScanner = function(s)
 	function newScan:processStatement(token)
 		if symTab[token] == nil then
 			abort("token \""..token.."\" not recognised")
-		elseif symTypes[token] == "register" then
-			assignment(token)
+		-- elseif symTab._type[token] == "register" then
+		-- 	assignment(token)
 		else
 			symTab[token]()
 		end
 	end
+	--Returns true if token found
 	function newScan:getStatement()
-		-- print("getting statement") io.read()
 		local token = self:getNextToken("^([_%a][_%w]*)")
-		if token == nil then return end --halt(" === SCRIPT COMPLETE === ") end
-		-- print("got token \""..token.."\"") io.read()
+		if token == nil then return end
 		self:processStatement(token)
 		return true
 	end
 	return newScan	
 end
 
+------------------------------------
+--Expression parser
+
+------------------------------------
 --Load input and specification files
-local symTab = locRequire(extraxtArg("-l") or "language specification")
-component = locRequire(extraxtArg("-a") or "architecture specification")
-local specification = locRequire(extraxtArg("-s") or "computer specification")
+
+symTab = require(extraxtArg("-l") or "language specification")
+component = require(extraxtArg("-a") or "architecture specification")
+specification = require(extraxtArg("-s") or "computer specification")
 local inFile = assert(io.open(extraxtArg("-f") or dirpath.."input.txt"))
-local input = newScanner(inFile:read("*all"))
+input = newScanner(inFile:read("*all"))
 inFile:close()
-print(input.s)
+
+------------------------------------
+--Scan input, constructing AST
+while input:getStatement() do end

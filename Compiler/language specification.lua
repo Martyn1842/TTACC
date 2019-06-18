@@ -10,11 +10,11 @@ lang.__newindex = function(t, k, v)
     end
     contents[k] = v
     if string.find(k, "^R[%d]+") then
-        lang._type[k] = "register"
+        lang.__type[k] = "register"
     elseif string.find(k, "^RAM[%d]+") then
-        lang._type[k] = "RAM"
+        lang.__type[k] = "RAM"
     else
-        lang._type[k] = "reserved"
+        lang.__type[k] = "reserved"
     end
 end
 setmetatable(lang, lang)

@@ -12,16 +12,34 @@
 
 --Defaults are defined in architecture specification
 
-local specification = {}
+local mt = {}
+mt.__index = mt
+mt.__newindex = function(t, k ,v)
+    if symTab[k] then abort("Symbol \""..k.."\" has already been defined") end
+    mt[k] = v
+end
+local specification = setmetatable({}, mt)
+local new = function(objType, name, ...)
+    specification[name] = component.new(objType, ...)
+    symTab[name] = mt[name]
+    symTab.__type[name] = objType
+end
+
+
+------------------------------------
+-- Start computer specification
 
 specification.dataLanes = 6
-specification.R1 = component.new("register")
-specification.R2 = component.new("register")
-specification.R3 = component.new("register")
-specification.R4 = component.new("register")
-specification.R4 = component.new("register")
-specification.R5 = component.new("register")
-specification.R6 = component.new("register")
-specification.NEG = component.new("func")
+new("register", "R1")
+new("register", "R2")
+new("register", "R3")
+new("register", "R4")
+new("register", "R5")
+new("register", "R6")
+new("register", "R7")
+new("func", "NEG")
+
+------------------------------------
+-- End computer specification
 
 return specification

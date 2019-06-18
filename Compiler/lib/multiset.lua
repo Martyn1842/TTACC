@@ -1,8 +1,8 @@
 local multiset = {}
+setmetatable(multiset, multiset)
 
 function multiset:new() --Returns a new multiset
-    local newSet = setmetatable({}, self)
-    self.__index = self
+    local newSet = setmetatable({}, getmetatable(self))
     return newSet
 end
 
@@ -25,7 +25,9 @@ function multiset:cardinality()
 end
 
 function multiset:subset(s2) --Returns true if set is subset of (or equal to) s2
-    if type(s2) ~= "table" then return false end
+    if getmetatable(s2) ~= getmetatable(self) then
+        error("attempt to calculate subset of a multiset with a non-multiset", 2)
+    end
     for k, v in pairs(self) do
         if not s2[k] or v > s2[k] then return false end
     end
@@ -33,30 +35,33 @@ function multiset:subset(s2) --Returns true if set is subset of (or equal to) s2
 end
 
 function multiset:equal(s2)
-    if type(s2) ~= "table" or not self:subset(s2) then
+    if getmetatable(s2) ~= getmetatable(self) then
+        error("attempt to compare a multiset with a non-multiset", 2)
+    end
+    if not self:subset(s2) then
         return false
     end
     return self.subset(s2, self)
 end
 
 function multiset:union(s2) --Returns union of set and s2
-    local result = setmetatable({}, getmetatable(self))
-    for k, v in pairs(self) do
-        result[k] = math.max(v, s2[k] or v)
+    if getmetatable(s2) ~= getmetatable(self) then
+        error("attempt to calculate union of a multiset with a non-multiset", 2)
     end
+    local result = self:copy()
     for k, v in pairs(s2) do
-        result[k] = result[k] or v
+        result[k] = math.max(v, result[k] or v)
     end
     return result
 end
 
 function multiset:sum(s2) --Returns sum of self and s2
-    local result = setmetatable({}, getmetatable(self))
-    for k, v in pairs(self) do
-        result[k] = v + (s2[k] or 0)
+    if getmetatable(s2) ~= getmetatable(self) then
+        error("attempt to calculate sum of a multiset with a non-multiset", 2)
     end
+    local result = self:copy()
     for k, v in pairs(s2) do
-        result[k] = result[k] or v
+        result[k] = v + (result[k] or 0)
     end
     return result
 end

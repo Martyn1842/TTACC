@@ -1,7 +1,7 @@
 ------------------------------------
 -- Language container creation
 
-local lang = {_type = {}}
+local lang = {__type = {}}
 local contents = {}
 lang.__index = contents
 lang.__newindex = function(t, k, v)
@@ -10,22 +10,23 @@ lang.__newindex = function(t, k, v)
     end
     contents[k] = v
     if string.find(k, "^R[%d]+") then
-<<<<<<< HEAD
         lang._type[k] = "register"
     elseif string.find(k, "^RAM[%d]+") then
         lang._type[k] = "RAM"
     else
         lang._type[k] = "reserved"
-=======
-        t._type[k] = "register"
-    elseif string.find(k, "^RAM[%d]+") then
-        t._type[k] = "RAM"
-    else
-        t._type[k] = "reserved"
->>>>>>> require-debugging
     end
 end
 setmetatable(lang, lang)
+
+local parse = {}
+parse.expression = function()
+    local res = {}
+    repeat
+        table.insert(res, input:getNextToken("^([_%a][_%w]*)"))
+    until not input:getNextToken("^(+)")
+    return res
+end
 
 ------------------------------------
 -- Language description
@@ -38,19 +39,19 @@ lang["MOV"] = function() --MOV(a+b+c, x, y, z) -> x, y, z = a+b+c
     repeat --Get destination identifiers
         local token = input:getNextToken("^([_%a][_%w]*)") or
             abort("invalid identifier \""..input:getNextToken("^([_%w]+)").."\"")
-        if not lang._type[token] then
+        if not lang[token] then
             abort("identifier \""..token.."\" not recognised")
         end
-        if lang._type[token] == "RAM" then
+        if lang.__type[token] == "RAM" then
             input:expect("[")
             local addr = parse.expression()
             input:expect("]")
-            token = constructAST.writeRAM(token, addr)
+            token = currAST:writeRAM(token, addr)
         end
         table.insert(ident, token)
     until not input:getNextToken("^(,)")
     input:expect(")")
-    constructAST.move(value, ident)
+    currAST:move(value, ident)
 end
 
 return lang

@@ -35,9 +35,10 @@ component.func = {
     minWDelay = 1
 }
 
-local specification = {}
-specification.write = 0 --Next free write address
-specification.read = 0 --Next fee read address
+local specification = {
+    write = 0, --Next free write address
+    read = 0 --Next fee read address
+}
 
 specification.new = function(objTyp, ...) --Creat and assign new component
     if not objTyp or not component[objTyp] then

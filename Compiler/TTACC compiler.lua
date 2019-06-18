@@ -98,23 +98,6 @@ local newScanner = function(s)
 			abort("expected \""..s.."\"")
 		end
 	end
-	function newScan:processStatement(token)
-		if symTab[token] == nil then
-			abort("token \""..token.."\" not recognised")
-		-- elseif symTab.__type[token] == "register" then
-		-- 	assignment(token)
-		else
-			symTab[token]()
-		end
-	end
-	--Returns true if token found
-	-- function newScan:getStatement()
-	-- 	local token = self:getNextToken("^([_%a][_%w]*)")
-	-- 	return token or nil
-	-- 	-- if token == nil then return end
-	-- 	-- self:processStatement(token)
-	-- 	-- return true
-	-- end
 	return newScan	
 end
 

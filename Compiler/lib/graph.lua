@@ -1,8 +1,9 @@
 local graph = {}
+setmetatable(graph, graph)
+-- graph.__index = graph
 
 function graph:new() --Returns a new graph
-    local newGraph = setmetatable({}, self)
-    self.__index = self
+    local newGraph = setmetatable({}, graph)
     return newGraph
 end
 
@@ -15,6 +16,7 @@ function graph:copy(seen) --Returns a copy of a graph
     for k, v in pairs(self) do
         newGraph[graph.copy(k, seen)] = graph.copy(v, seen)
     end
+    return newGraph
 end
 
 function graph:print() --Prints graph, order undefined
@@ -63,17 +65,21 @@ function graph:addVertex(vertex, neighbours) --Create vertex with optional direc
     return true
 end
 
-function graph:addUniqueVertex(vertex, neighbours)
-    --If vertex then add vertex "vertex:N" where N is number of vertices "vertex"+1
-    --Else add vertex "N" where N is number of numberic vertices+1
-    local i=1
-    if vertex then
-        while self[vertex..":"..i] do i=i+1 end
-        self:addVertex(vertex..":"..i, neighbours)
-    else
+function graph:addUniqueVertex(vertex, neighbours) --Adds a unique vertex with optional neighbours,
+    local i=1                                      --returning the name of the vertex created
+    if vertex then --Vertex name specified
+        vertex = tostring(vertex)
+        if self[vertex] then --"vertex" is not unique,
+            --add vertex "vertex:N" where N is number of vertices "vertex"+1
+            while self[vertex..":"..i] do i=i+1 end
+            i = vertex..":"..i
+        else --"vertex" is unique, simply add it
+            i = vertex
+        end
+    else --Add numeric vertex "N" where N is number of numeric vertices+1
         while self[i] do i=i+1 end
-        self:addVertex(i, neighbours)
     end
+    self:addVertex(i, neighbours)
     return i
 end
 
@@ -131,6 +137,17 @@ end
 function graph:getInfo(vertex) --Returns "info" field of vertex
     if self[vertex] then
         return self[vertex].info
+    end
+end
+
+function graph:disjointUnion(graph2) --Returns the disjoint union with graph2
+    if getmetatable(graph2) ~= getmetatable(self) then
+        error("attempt to combine a non-graph \""..tostring(graph2).."\" with a graph", 2)
+    end
+    local newGraph = self:copy()
+    for k, v in pairs(graph2) do
+        local n = newGraph:addUniqueVertex(k, v)
+        newGraph:setInfo(n==0 and k or k..":"..n, graph2:getInfo(k))
     end
 end
 

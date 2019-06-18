@@ -40,7 +40,7 @@ local specification = {
     read = 0 --Next fee read address
 }
 
-specification.new = function(objTyp, ...) --Creat and assign new component
+specification.new = function(objTyp, ...) --Create and assign new component
     if not objTyp or not component[objTyp] then
         abort("invalid objTyp in specification")
     end

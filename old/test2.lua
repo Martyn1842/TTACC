@@ -1,4 +1,4 @@
-input="A = X*8*2\n B=X*8/2\nC=X/8*2\nD=X/8/2"
+input="A = X*8*2\n B=X*8/2\nC=X/8*2\nD=X/8/2\n E=2+4*8\n F=(2+4)*8"
 currLine=1
 cursorPos=0
 

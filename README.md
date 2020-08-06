@@ -6,12 +6,12 @@ A (WIP) compiler for a  modular [transport triggered architecture](https://en.wi
 
 ---
 > Current features:
-> - None!
+> - Basic Python script to convert between Factorio blueprint strings and JSON
 
 > Coming Soon<sup>TM</sup>:
+> - Documentation describing architecture and compiler
 > - Basic implemenation of minimal hardware (core, register, RAM) and instructions (MOVE, JUMP, SLEEP)
 > - Compiling to circuit frames for manual programming of computer
-> - Basic Python script to convert between Factorio blueprint strings and JSON
 
 ---
 > Signals:
@@ -24,4 +24,4 @@ A (WIP) compiler for a  modular [transport triggered architecture](https://en.wi
 
 ---
 
-Written in [Lua](lua.org) 5.3.4 with some [Python](python.org) 3.8.3, Lua is required to run the compiler
+Written in [Lua](lua.org) 5.4.0 with some [Python](python.org) 3.8.3, Lua is required to run the compiler

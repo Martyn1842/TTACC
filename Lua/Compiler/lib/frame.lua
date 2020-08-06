@@ -9,6 +9,8 @@
 
 
 local signalIDs = require("lib.signalIDs")
+local totalSignals = signalIDs[2]
+signalIDs = signalIDs[1]
 
 local int32 = function(n)
     if tonumber(n) then --If tonumber can directly convert (number, string decimal, string hexadecimal)
@@ -131,6 +133,15 @@ function frame:mul(f2) --Elementwise multiplication of frame and f2
 end
 frame.__mul = frame.mul
 
+function frame:sum(signal) --Returns the sum of elements of frame as type "signal"
+    signal = signal or "signal-dot"
+    local total = totalSignals * default[self]
+    for _, v in pairs(values[self]) do
+        total = total + v - default[self]
+    end
+    return frame:new({ [signal]=total })
+end
+
 function frame:eq(f2) --Returns true if frame == f2
     if getmetatable(f2) ~= getmetatable(self) then
         error("attempt to compare a non-frame \""..tostring(f2).."\" with a frame", 2)
@@ -147,26 +158,25 @@ frame.__eq = frame.eq
 
 function frame:tostring()
     local map = {}
+    local s = "DEFAULT: "..default[self]
     for k, _ in pairs(values[self]) do
         table.insert(map, k)
     end
-    table.sort(map)
     if #map > 0 then
-        local s = map[1]..": "..values[self][map[1]]
-        for i = 2, #map do
+        table.sort(map)
+        for i = 1, #map do
             s = s.."\n"..map[i]..": "..values[self][map[i]]
         end
-        return s
     end
+    return s
 end
+frame.__tostring = frame.tostring
 
 function frame:print()
     if vPrint then
         vPrint(self:tostring())
-        vPrint("DEFAULT: "..default[self])
     else
-        print(self:tostring())
-        print("DEFAULT: "..default[self])
+        print(self)
     end
 end
 
@@ -184,11 +194,7 @@ frame.__newindex = function(t, k, v)
         if overflow and warning then
             warning("Integer overflow occurred! \""..k.."\": "..v.." -> "..vI)
         end
-        if vI == default[t] then
-            values[t][k] = nil
-        else
-            values[t][k] = v
-        end
+        values[t][k] = vI == default[t] and nil or vI
     else
         error("attempted to set invalid signalID \""..k.."\"", 2)
     end

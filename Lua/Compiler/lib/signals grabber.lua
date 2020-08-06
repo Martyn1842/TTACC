@@ -99,13 +99,13 @@ f:write("--A dictionary of valid signalIDs\n--Contains "..#data.." signalIDs\n")
 f:write("--Test if \"signalID[name]\" is true to confirm \"name\" is a valid signal type\n")
 f:write("--Signal types are in alphabetical order and have value N for N-th type\n")
 f:write("--This is for creation of unique integer dictionaries (eg. \"a\": 1, \"b\": 2, \"c\": 3, etc)\n")
-f:write("return {\n")
+f:write("return {\n    {\n")
 if data[1] then
     table.sort(data)
-    f:write("  [\""..data[1].."\"] = 1")
+    f:write("        [\""..data[1].."\"] = 1")
     for i = 2, #data do
-        f:write(",\n  [\""..data[i].."\"] = "..i)
+        f:write(",\n        [\""..data[i].."\"] = "..i)
     end
 end
-f:write("\n}")
+f:write("\n    },\n    "..#data.."\n}")
 f:close()

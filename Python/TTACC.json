@@ -1,0 +1,3401 @@
+{
+    "blueprint_book": {
+        "blueprints": [
+            {
+                "blueprint": {
+                    "icons": [
+                        {
+                            "signal": {
+                                "type": "item",
+                                "name": "medium-electric-pole"
+                            },
+                            "index": 1
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-H"
+                            },
+                            "index": 2
+                        },
+                        {
+                            "signal": {
+                                "type": "item",
+                                "name": "red-wire"
+                            },
+                            "index": 3
+                        },
+                        {
+                            "signal": {
+                                "type": "item",
+                                "name": "green-wire"
+                            },
+                            "index": 4
+                        }
+                    ],
+                    "entities": [
+                        {
+                            "entity_number": 1,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -11,
+                                "y": -4
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 3
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 3
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 2,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -5,
+                                "y": -3
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 4
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 3,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": -4
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 1
+                                        },
+                                        {
+                                            "entity_id": 5
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 1
+                                        },
+                                        {
+                                            "entity_id": 5
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 4,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 2,
+                                "y": -3
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 2
+                                        },
+                                        {
+                                            "entity_id": 6
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 5,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": -4
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 3
+                                        },
+                                        {
+                                            "entity_id": 7
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 3
+                                        },
+                                        {
+                                            "entity_id": 7
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 6,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 9,
+                                "y": -3
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 4
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 7,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 10,
+                                "y": -4
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 5
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 5
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 8,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -6,
+                                "y": -2
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 11
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 9,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -7,
+                                "y": -1
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 10
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 10,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 0,
+                                "y": -1
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 9
+                                        },
+                                        {
+                                            "entity_id": 12
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 11,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 1,
+                                "y": -2
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 8
+                                        },
+                                        {
+                                            "entity_id": 13
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 12,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 7,
+                                "y": -1
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 10
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 13,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 8,
+                                "y": -2
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 11
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 14,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -8,
+                                "y": 0
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 17
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 15,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -9,
+                                "y": 1
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 16
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 16,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -2,
+                                "y": 1
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 15
+                                        },
+                                        {
+                                            "entity_id": 18
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 17,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -1,
+                                "y": 0
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 14
+                                        },
+                                        {
+                                            "entity_id": 19
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 18,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 5,
+                                "y": 1
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 16
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 19,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 6,
+                                "y": 0
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 17
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 20,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -10,
+                                "y": 2
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 23
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 21,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -11,
+                                "y": 3
+                            }
+                        },
+                        {
+                            "entity_number": 22,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": 3
+                            }
+                        },
+                        {
+                            "entity_number": 23,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -3,
+                                "y": 2
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 20
+                                        },
+                                        {
+                                            "entity_id": 24
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 24,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 4,
+                                "y": 2
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 23
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 25,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": 3
+                            }
+                        },
+                        {
+                            "entity_number": 26,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 10,
+                                "y": 3
+                            }
+                        }
+                    ],
+                    "item": "blueprint",
+                    "label": "Bus Section - Horizontal",
+                    "version": 77311705089
+                },
+                "index": 0
+            },
+            {
+                "blueprint": {
+                    "icons": [
+                        {
+                            "signal": {
+                                "type": "item",
+                                "name": "medium-electric-pole"
+                            },
+                            "index": 1
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-V"
+                            },
+                            "index": 2
+                        },
+                        {
+                            "signal": {
+                                "type": "item",
+                                "name": "red-wire"
+                            },
+                            "index": 3
+                        },
+                        {
+                            "signal": {
+                                "type": "item",
+                                "name": "green-wire"
+                            },
+                            "index": 4
+                        }
+                    ],
+                    "entities": [
+                        {
+                            "entity_number": 1,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": -11
+                            }
+                        },
+                        {
+                            "entity_number": 2,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 2,
+                                "y": -10
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 12
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 3,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": -11
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 10
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 10
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 4,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 1,
+                                "y": -9
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 11
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 5,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 0,
+                                "y": -8
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 14
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 6,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -1,
+                                "y": -7
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 13
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 7,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -2,
+                                "y": -6
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 16
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 8,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -3,
+                                "y": -5
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 15
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 9,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": -4
+                            }
+                        },
+                        {
+                            "entity_number": 10,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": -4
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 3
+                                        },
+                                        {
+                                            "entity_id": 19
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 3
+                                        },
+                                        {
+                                            "entity_id": 19
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 11,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 1,
+                                "y": -2
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 4
+                                        },
+                                        {
+                                            "entity_id": 21
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 12,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 2,
+                                "y": -3
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 2
+                                        },
+                                        {
+                                            "entity_id": 18
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 13,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -1,
+                                "y": 0
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 6
+                                        },
+                                        {
+                                            "entity_id": 23
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 14,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 0,
+                                "y": -1
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 5
+                                        },
+                                        {
+                                            "entity_id": 20
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 15,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -3,
+                                "y": 2
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 8
+                                        },
+                                        {
+                                            "entity_id": 24
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 16,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -2,
+                                "y": 1
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 7
+                                        },
+                                        {
+                                            "entity_id": 22
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 17,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": 3
+                            }
+                        },
+                        {
+                            "entity_number": 18,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 2,
+                                "y": 4
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 12
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 19,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": 3
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 10
+                                        },
+                                        {
+                                            "entity_id": 26
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 10
+                                        },
+                                        {
+                                            "entity_id": 26
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 20,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 0,
+                                "y": 6
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 14
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 21,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 1,
+                                "y": 5
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 11
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 22,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -2,
+                                "y": 8
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 16
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 23,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -1,
+                                "y": 7
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 13
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 24,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -3,
+                                "y": 9
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 15
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 25,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": 10
+                            }
+                        },
+                        {
+                            "entity_number": 26,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": 10
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 19
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 19
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "item": "blueprint",
+                    "label": "Bus Section - Vertical",
+                    "version": 77311705089
+                },
+                "index": 1
+            },
+            {
+                "blueprint": {
+                    "icons": [
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-R"
+                            },
+                            "index": 1
+                        }
+                    ],
+                    "entities": [
+                        {
+                            "entity_number": 1,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": -18
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 2
+                                        },
+                                        {
+                                            "entity_id": 9,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 2,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": -18
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 1
+                                        },
+                                        {
+                                            "entity_id": 16,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 3,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 1,
+                                "y": -16
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 15,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 4,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 2,
+                                "y": -17
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 17,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 5,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -1,
+                                "y": -14
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 13,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 6,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 0,
+                                "y": -15
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 14,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 7,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -3,
+                                "y": -12
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 10,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 8,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -2,
+                                "y": -13
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 12,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 9,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": -4,
+                                "y": -9.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "=",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 19
+                                        },
+                                        {
+                                            "entity_id": 27,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 1
+                                        },
+                                        {
+                                            "entity_id": 27,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 10,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": -3,
+                                "y": -9.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "=",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 12,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 20
+                                        },
+                                        {
+                                            "entity_id": 28,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 7
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 11,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": -11
+                            }
+                        },
+                        {
+                            "entity_number": 12,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": -2,
+                                "y": -9.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "=",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 10,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 13,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 21
+                                        },
+                                        {
+                                            "entity_id": 29,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 8
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 13,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": -1,
+                                "y": -9.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "=",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 12,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 14,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 22
+                                        },
+                                        {
+                                            "entity_id": 30,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 5
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 14,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 0,
+                                "y": -9.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "=",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 13,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 15,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 23
+                                        },
+                                        {
+                                            "entity_id": 31,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 6
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 15,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 1,
+                                "y": -9.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "=",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 14,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 17,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 24
+                                        },
+                                        {
+                                            "entity_id": 32,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 3
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 16,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 3,
+                                "y": -9.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "=",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 17,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 38,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 25
+                                        },
+                                        {
+                                            "entity_id": 34,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 2
+                                        },
+                                        {
+                                            "entity_id": 34,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 17,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 2,
+                                "y": -9.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "=",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 16,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 15,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 26
+                                        },
+                                        {
+                                            "entity_id": 33,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 4
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 18,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": -11
+                            }
+                        },
+                        {
+                            "entity_number": 19,
+                            "name": "constant-combinator",
+                            "position": {
+                                "x": -4,
+                                "y": -8
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "filters": [
+                                    {
+                                        "signal": {
+                                            "type": "virtual",
+                                            "name": "signal-dot"
+                                        },
+                                        "count": -2097152,
+                                        "index": 1
+                                    }
+                                ]
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 9,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 20,
+                            "name": "constant-combinator",
+                            "position": {
+                                "x": -3,
+                                "y": -8
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "filters": [
+                                    {
+                                        "signal": {
+                                            "type": "virtual",
+                                            "name": "signal-dot"
+                                        },
+                                        "count": -8192,
+                                        "index": 1
+                                    }
+                                ]
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 10,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 21,
+                            "name": "constant-combinator",
+                            "position": {
+                                "x": -2,
+                                "y": -8
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "filters": [
+                                    {
+                                        "signal": {
+                                            "type": "virtual",
+                                            "name": "signal-dot"
+                                        },
+                                        "count": -4096,
+                                        "index": 1
+                                    }
+                                ]
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 12,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 22,
+                            "name": "constant-combinator",
+                            "position": {
+                                "x": -1,
+                                "y": -8
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "filters": [
+                                    {
+                                        "signal": {
+                                            "type": "virtual",
+                                            "name": "signal-dot"
+                                        },
+                                        "count": -2048,
+                                        "index": 1
+                                    }
+                                ]
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 13,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 23,
+                            "name": "constant-combinator",
+                            "position": {
+                                "x": 0,
+                                "y": -8
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "filters": [
+                                    {
+                                        "signal": {
+                                            "type": "virtual",
+                                            "name": "signal-dot"
+                                        },
+                                        "count": -1024,
+                                        "index": 1
+                                    }
+                                ]
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 14,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 24,
+                            "name": "constant-combinator",
+                            "position": {
+                                "x": 1,
+                                "y": -8
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "filters": [
+                                    {
+                                        "signal": {
+                                            "type": "virtual",
+                                            "name": "signal-dot"
+                                        },
+                                        "count": -512,
+                                        "index": 1
+                                    }
+                                ]
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 15,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 25,
+                            "name": "constant-combinator",
+                            "position": {
+                                "x": 3,
+                                "y": -8
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "filters": [
+                                    {
+                                        "signal": {
+                                            "type": "virtual",
+                                            "name": "signal-dot"
+                                        },
+                                        "count": -128,
+                                        "index": 1
+                                    }
+                                ]
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 16,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 26,
+                            "name": "constant-combinator",
+                            "position": {
+                                "x": 2,
+                                "y": -8
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "filters": [
+                                    {
+                                        "signal": {
+                                            "type": "virtual",
+                                            "name": "signal-dot"
+                                        },
+                                        "count": -256,
+                                        "index": 1
+                                    }
+                                ]
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 17,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 27,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": -4,
+                                "y": -6.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 2097152,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 9,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 9,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 28,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": -3,
+                                "y": -6.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 8192,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 29,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 10,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 29,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": -2,
+                                "y": -6.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 4096,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 28,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 30,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 12,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 30,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": -1,
+                                "y": -6.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 2048,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 29,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 31,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 13,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 31,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 0,
+                                "y": -6.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 1024,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 30,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 32,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 14,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 32,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 1,
+                                "y": -6.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 512,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 31,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 33,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 15,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 33,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 2,
+                                "y": -6.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 256,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 32,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 34,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 17,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 34,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 3,
+                                "y": -6.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 128,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 16,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 33,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 16,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 35,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": -4
+                            }
+                        },
+                        {
+                            "entity_number": 36,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": -4
+                            }
+                        },
+                        {
+                            "entity_number": 37,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 0,
+                                "y": 0.5
+                            },
+                            "direction": 4,
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-each"
+                                    },
+                                    "second_constant": -1,
+                                    "operation": "*",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-each"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 38,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 39,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 38,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 1,
+                                "y": 0.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-each"
+                                    },
+                                    "second_constant": 0,
+                                    "operation": "+",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-each"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 38,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 39,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 38,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 37,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 16,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 39,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 0.5,
+                                "y": 2
+                            },
+                            "direction": 2,
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 37,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 41,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 38,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 41,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 40,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": 3
+                            }
+                        },
+                        {
+                            "entity_number": 41,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 0.5,
+                                "y": 3
+                            },
+                            "direction": 2,
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "second_constant": -1,
+                                    "operation": "*",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 39,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 50,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 39,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 42,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": 3
+                            }
+                        },
+                        {
+                            "entity_number": 43,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": -4,
+                                "y": 6.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 51,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 59
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 44,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": -3,
+                                "y": 6.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 52,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 65
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 45,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 45,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": -2,
+                                "y": 6.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 54,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 66
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 44,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 46,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 46,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": -1,
+                                "y": 6.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 53,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 63
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 45,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 47,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 47,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 0,
+                                "y": 6.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 56,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 64
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 46,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 48,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 48,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 1,
+                                "y": 6.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 55,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 61
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 47,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 49,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 49,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 2,
+                                "y": 6.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 57,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 62
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 48,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 50,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 50,
+                            "name": "decider-combinator",
+                            "position": {
+                                "x": 3,
+                                "y": 6.5
+                            },
+                            "control_behavior": {
+                                "decider_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    },
+                                    "constant": 0,
+                                    "comparator": "\u2260",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-everything"
+                                    },
+                                    "copy_count_from_input": true
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 58,
+                                            "circuit_id": 2
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 60
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "green": [
+                                        {
+                                            "entity_id": 49,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 41,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 51,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": -4,
+                                "y": 8.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 16384,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 59
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 43,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 52,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": -3,
+                                "y": 8.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 64,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 54,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 44,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 54,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 53,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": -1,
+                                "y": 8.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 16,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 54,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 56,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 46,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 54,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 56,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 54,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": -2,
+                                "y": 8.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 32,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 52,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 53,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 45,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 53,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 52,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 55,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 1,
+                                "y": 8.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 4,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 56,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 57,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 48,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 56,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 57,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 56,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 0,
+                                "y": 8.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 8,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 53,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 55,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 47,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 55,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 53,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 57,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 2,
+                                "y": 8.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 2,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 55,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 58,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 49,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 55,
+                                            "circuit_id": 2
+                                        },
+                                        {
+                                            "entity_id": 58,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 58,
+                            "name": "arithmetic-combinator",
+                            "position": {
+                                "x": 3,
+                                "y": 8.5
+                            },
+                            "control_behavior": {
+                                "arithmetic_conditions": {
+                                    "first_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-Z"
+                                    },
+                                    "second_constant": 1,
+                                    "operation": "AND",
+                                    "output_signal": {
+                                        "type": "virtual",
+                                        "name": "signal-dot"
+                                    }
+                                }
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 57,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 60
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "red": [
+                                        {
+                                            "entity_id": 50,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 57,
+                                            "circuit_id": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 59,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": 10
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 51,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 60
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 43,
+                                            "circuit_id": 1
+                                        },
+                                        {
+                                            "entity_id": 60
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 60,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": 10
+                            },
+                            "connections": {
+                                "1": {
+                                    "red": [
+                                        {
+                                            "entity_id": 59
+                                        },
+                                        {
+                                            "entity_id": 58,
+                                            "circuit_id": 1
+                                        }
+                                    ],
+                                    "green": [
+                                        {
+                                            "entity_id": 59
+                                        },
+                                        {
+                                            "entity_id": 50,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 61,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 1,
+                                "y": 12
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 48,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 62,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 2,
+                                "y": 11
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 49,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 63,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -1,
+                                "y": 14
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 46,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 64,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 0,
+                                "y": 13
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 47,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 65,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -3,
+                                "y": 16
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 44,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 66,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -2,
+                                "y": 15
+                            },
+                            "connections": {
+                                "1": {
+                                    "green": [
+                                        {
+                                            "entity_id": 45,
+                                            "circuit_id": 1
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "entity_number": 67,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": -4,
+                                "y": 17
+                            }
+                        },
+                        {
+                            "entity_number": 68,
+                            "name": "medium-electric-pole",
+                            "position": {
+                                "x": 3,
+                                "y": 17
+                            }
+                        }
+                    ],
+                    "item": "blueprint",
+                    "label": "Register",
+                    "version": 77311705089
+                },
+                "index": 2
+            }
+        ],
+        "item": "blueprint-book",
+        "label": "TTACC",
+        "active_index": 0,
+        "version": 77311705089
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "blueprint": {
+        "icons": [
+            {
+                "signal": {
+                    "type": "item",
+                    "name": "constant-combinator"
+                },
+                "index": 1
+            }
+        ],
+        "entities": [
+            {
+                "entity_number": 1,
+                "name": "constant-combinator",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "direction": 4,
+                "control_behavior": {
+                    "filters": [
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-A"
+                            },
+                            "count": -1344743443,
+                            "index": 1
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-B"
+                            },
+                            "count": 1329342367,
+                            "index": 2
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-C"
+                            },
+                            "count": 1609838587,
+                            "index": 3
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-D"
+                            },
+                            "count": -220694163,
+                            "index": 4
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-E"
+                            },
+                            "count": -91685563,
+                            "index": 5
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-F"
+                            },
+                            "count": -1092558991,
+                            "index": 6
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-G"
+                            },
+                            "count": -554111108,
+                            "index": 7
+                        },
+                        {
+                            "signal": {
+                                "type": "virtual",
+                                "name": "signal-2"
+                            },
+                            "count": -1,
+                            "index": 18
+                        }
+                    ]
+                }
+            }
+        ],
+        "item": "blueprint",
+        "version": 77311770624
+    }
+}
